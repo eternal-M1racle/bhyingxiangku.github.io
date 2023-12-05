@@ -1,0 +1,5 @@
+.img-container {position: relative;overflow: hidden;width: 30opx;height: 200px;}
+.img-container img {position: absolute;top: o;
+left: o;width: 100%;height: 100%;}
+.img-container:hover img {transform: scale(1.2);
+transition: transform 0.2s ease-in-out;}

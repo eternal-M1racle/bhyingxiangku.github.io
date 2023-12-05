@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body{
+        background-image: url("2458dd55e931470537a7af8d61bdadb.jpg");
+
+      }
+      .highlighted-text {
+            font-weight: bold;
+            color: rgb(54, 82, 125);
+            text-decoration: underline;
+            font-size: 24px; /* 调整字号大小 */
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .icon:hover {
+            color: black;
+            cursor: pointer;
+      }
+      /* 确保图片横向排列并有间隔 */
+      .c {
+        display: flex; /* 使用弹性盒子布局 */
+        justify-content: space-between; /* 在图片之间添加等间距 */
+      }
+      
+      .i {
+        margin: 10px; /* 在图片周围添加间隔 */
+        position: relative;
+        display: inline-block;
+      }
+      
+      .i img {
+        width: 100%; /* 设置图片宽度为容器的100% */
+        max-width: 1200px; /* 限制最大宽度，以防图片过大 */
+      }
+      .c .i a img.hover-effect {
+          transition: transform 0.3s ease-in-out;
+          border-radius: 15px; /* 圆角边框 */
+      }
+
+      .c .i a img.hover-effect:hover {
+          transform: scale(1.1);
+      }
+      .image-text {
+          position: absolute;
+          bottom: 10px; /* 调整文字位置 */
+          left: 10px;  /* 调整文字位置 */
+          color: white; /* 文字颜色 */
+          font-size: 20px; /* 文字大小 */
+          background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，增加可读性 */
+          padding: 5px; /* 文字周围的空间 */
+          border-radius: 10px; /* 添加圆角边界 */
+      }
+      .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000000;
+}
+ 
+ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+ 
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center; 
+}
+ 
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: vertical;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+ /* 输入框背景色修改 */
+ textarea,
+ input[type="text"] {
+   background-color: rgb(117, 223, 188);
+ }
+ 
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+.name {
+  color: rgb(255, 179, 0);
+  font-weight: bold; 
+}
+ 
+button.sub {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+ 
+button.sub:hover {
+  background-color: #45a049;
+}
+ 
+button.remove {
+  background-color: #f36c62;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+ 
+button.remove:hover {
+  background-color: #ed322f;
+}
+/* 添加button渐变效果 */
+ .sub{
+  padding: 1rem 2.5rem;
+  border:none;
+  outline:none;
+  border-radius: 0.4rem;
+  background-color: rgb(14,14, 26);
+  color:rgb(234, 234, 234);
+  box-shadow: 0px 0px 60px #1471a2;
+  /* 设置盒子反射 */
+  -webkit-box-reflect:
+  /* 反射设置在底部 */ 
+  below 10px
+  linear-gradient(
+      /* 设置渐变色 */
+      to bottom,
+      rgba(0,0,0,0.0)
+      rgba(0,0,0,0.4)
+  );
+}
+/* 设置悬浮样式 */
+  .sub:hover{
+      background:  linear-gradient(
+          270deg,
+          rgba(178, 210, 133, 0.681)0%, 
+          rgba(31,215,232,0.873)60%);
+          color: rgb(4,4,38);textarea,
+input[type="text"] {
+  /* 其他样式规则 */
+ 
+  width: 50%;
+}
+ 
+  }
+  .sub{
+      transition:1s
+  }
+  /* 输入框背景色修改 */
+  textarea,
+input[type="text"] {
+  background-color: rgb(255, 255, 255);
+  width: 50%;
+}
+
+      </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css" />
+    <link rel="stylesheet" type="text/css" href="css/w3-parallax.css" />
+    <link rel="stylesheet" href="css/horizontal.css" />
+
+    <title>欢迎来到 | 北航影像库</title>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-text-black" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="index.html" class="w3-bar-item w3-hover-black w3-button"> 首页</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-user"></i> 关于</a
+        >
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-th"></i> 图片</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> 联系我们</a
+        >
+      </div>
+    </div>
+        <h1>留言板</h1>
+     <hr>
+        <ul class="a"></ul>
+ 
+        <div class="container"> 
+            <input type="text" placeholder="请输入昵称:" name="name" id="nameInput">
+            <textarea placeholder="请留言" name="pwd" id="textarea" cols="36" rows="16"></textarea>
+            <br>
+            <button class="sub">发布</button>
+        </div>
+    <script>
+        prompt('欢迎进入留言板，请文明留言！');
+    </script>
+    <script src="liuyan.js"></script>
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >关于</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >图片</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >联系我们</a
+        >
+      </div>
+    </div>
+    <!-- 横栏图片  -->
+    <div id="scroll">
+      <img
+        src="img/city-1.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-2.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-3.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-4.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-5.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/liberty-statue.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/bridge-brooklyn.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-1.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-2.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-3.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <span class="w3-button w3-display-topright" title="Close Modal Image"
+          ><i class="fas fa-times"></i> Close</span
+        >
+        <div
+          class="w3-modal-content w3-animate-opacity w3-center w3-transparent "
+        >
+          <img id="img01" class="w3-image" />
+          <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+      <h3 class="w3-center">我的最新作品</h3>
+      <p class="w3-center">
+        <em
+          >Here are some of my latest lorem work ipsum tipsum.</em
+        >
+      </p>
+      <br />
+
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img
+            src="img/city-1.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-text-white w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-2.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-3.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-4.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img
+            src="img/city-5.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/liberty-statue.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity w3-text-white"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/cityscape-roads.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+        <div class="w3-col m3">
+          <img
+            src="img/bridge-brooklyn.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+      </div>
+      
+
+    <!-- Footer -->
+    <footer class="w3-center">
+      <a href="#home" class="w3-button w3-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>回 到 顶 部
+      </a>
+      <p>
+        Parallax Theme &copy; 2019<a
+          href="#"
+          title="Parallax Theme website"
+          class="w3-hover-text-green"
+        >
+          MIT License</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-white",
+            ""
+          );
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<html lang="en">
+  <head>
+    <style>
+			.aa{
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+			}
+			.aa>img{
+				width: 100%;
+				height: 800px
+			}
+			.aa:hover>img:last-child{
+				display: block;
+			}
+			.aa:hover>img:first-child{
+				display: none;
+			}
+			.aa>img:last-child{
+				display: none;
+				
+			}
+            
+		</style>
+        <style>
+			.bb{
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+			}
+			.bb>img{
+				width: 100%;
+				height: 800px
+			}
+			.bb:hover>img:last-child{
+				display: block;
+			}
+			.bb:hover>img:first-child{
+				display: none;
+			}
+			.bb>img:last-child{
+				display: none;
+				
+			}
+            
+		</style>
+        <style>
+			.cc{
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+			}
+			.cc>img{
+				width: 100%;
+				height: 800px
+			}
+			.cc:hover>img:last-child{
+				display: block;
+			}
+			.cc:hover>img:first-child{
+				display: none;
+			}
+			.cc>img:last-child{
+				display: none;
+				
+			}
+            
+		</style>
+        
+    
+    <style>
+      .highlighted-text {
+            font-weight: bold;
+            color: rgb(54, 82, 125);
+            text-decoration: underline;
+            font-size: 24px; /* 调整字号大小 */
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .icon:hover {
+            color: black;
+            cursor: pointer;
+      }
+      /* 确保图片横向排列并有间隔 */
+      .c {
+        display: flex; /* 使用弹性盒子布局 */
+        justify-content: space-between; /* 在图片之间添加等间距 */
+      }
+      
+      .i {
+        margin: 10px; /* 在图片周围添加间隔 */
+        position: relative;
+        display: inline-block;
+      }
+      
+      .i img {
+        width: 100%; /* 设置图片宽度为容器的100% */
+        max-width: 1200px; /* 限制最大宽度，以防图片过大 */
+      }
+      .c .i a img.hover-effect {
+          transition: transform 0.3s ease-in-out;
+          border-radius: 15px; /* 圆角边框 */
+      }
+
+      .c .i a img.hover-effect:hover {
+          transform: scale(1.1);
+      }
+      .image-text {
+          position: absolute;
+          bottom: 10px; /* 调整文字位置 */
+          left: 10px;  /* 调整文字位置 */
+          color: white; /* 文字颜色 */
+          font-size: 20px; /* 文字大小 */
+          background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，增加可读性 */
+          padding: 5px; /* 文字周围的空间 */
+          border-radius: 10px; /* 添加圆角边界 */
+      }
+
+      </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css" />
+    <link rel="stylesheet" type="text/css" href="css/w3-parallax.css" />
+    <link rel="stylesheet" href="css/horizontal.css" />
+</head>
+<body>
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-text-black" id="myNavbar">
+      <a
+        class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+        href="javascript:void(0);"
+        onclick="toggleFunction()"
+        title="Toggle Navigation Menu"
+      >
+        <i class="fa fa-bars"></i>
+      </a>
+      <a href="#home" class="w3-bar-item w3-hover-black w3-button"> 首页</a>
+      <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+        ><i class="fa fa-user"></i> 关于</a
+      >
+      <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"
+        ><i class="fa fa-th"></i> 图片</a
+      >
+      <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+        ><i class="fa fa-envelope"></i> 联系我们</a
+      >
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div
+      id="navDemo"
+      class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+    >
+      <a
+        href="#about"
+        class="w3-bar-item w3-button"
+        onclick="toggleFunction()"
+        >关于</a
+      >
+      <a
+        href="#portfolio"
+        class="w3-bar-item w3-button"
+        onclick="toggleFunction()"
+        >图片</a
+      >
+      <a
+        href="#contact"
+        class="w3-bar-item w3-button"
+        onclick="toggleFunction()"
+        >联系我们</a
+      >
+    </div>
+  </div>
+  <style>
+    .aa {position: relative;overflow: hidden;width: 75px;height: 75px;}
+    .aa img {position: absolute;top: o;
+    left: o;width: 100%;height: 100%;}
+    .aa:hover img {transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;}
+    </style>
+    <style>
+    .bb {position: relative;overflow: hidden;width: 75px;height: 75px;}
+    .bb img {position: absolute;top: o;
+    left: o;width: 100%;height: 100%;}
+    .bb:hover img {transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;}
+    </style>
+    <style>
+    .cc {position: relative;overflow: hidden;width: 75px;height: 75px;}
+    .cc img {position: absolute;top: o;
+    left: o;width: 100%;height: 100%;}
+    .cc:hover img {transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;}
+    </style>
+    <style>
+        .img-container{
+            position: absolute;
+            z-index: 1;
+        }
+    </style>
+    <style>
+        .aa{
+            position: absolute;
+            z-index: 2;
+            left: 487px;
+            top: 653px;
+        }
+    </style>
+    <style>
+        .bb{
+            position: absolute;
+            z-index: 3;
+            left: 643px;
+            top: 190px;
+        }
+    </style>
+    <style>
+        .cc{
+            position: absolute;
+            z-index: 4;
+            left: 420px;
+            top: 440px;
+        }
+    </style>
+
+<div class="img-container">
+    <img src="0EBE5D74FF476DE8C1607AD5E33_8213B3DA_19E1D9.jpg" alt="your-image" width="1500px" height="1000px">
+</div>
+
+<div class="aa">
+    <a href="教学楼图片组" class="aaa"><img src="坐标 (1).png" > </a>
+    <img src="0a8328cb0b74ad37df34f751c1f4fcc.jpg">
+</div>
+
+<div class="bb">
+    <a href="花园图片组" class="bbb"><img src="坐标 (1).png" ></a>
+    <img src="55ecf9dcc7187a5ef784a77cc5be83d.jpg">
+</div>
+
+<div class="cc">
+    <a href="主楼&天空之镜图片组" class="ccc"><img src="坐标 (1).png"></a>
+    <img src="ad2444bd18c8941b36f5ef7d4c5059a.jpg">
+</div>
+
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .highlighted-text {
+            font-weight: bold;
+            color: rgb(54, 82, 125);
+            text-decoration: underline;
+            font-size: 24px; /* 调整字号大小 */
+        }
+
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .icon:hover {
+            color: black;
+            cursor: pointer;
+      }
+      /* 确保图片横向排列并有间隔 */
+      .c {
+        display: flex; /* 使用弹性盒子布局 */
+        justify-content: space-between; /* 在图片之间添加等间距 */
+      }
+      
+      .i {
+        margin: 10px; /* 在图片周围添加间隔 */
+        position: relative;
+        display: inline-block;
+      }
+      
+      .i img {
+        width: 100%; /* 设置图片宽度为容器的100% */
+        max-width: 1200px; /* 限制最大宽度，以防图片过大 */
+      }
+      .c .i a img.hover-effect {
+          transition: transform 0.3s ease-in-out;
+          border-radius: 15px; /* 圆角边框 */
+      }
+
+      .c .i a img.hover-effect:hover {
+          transform: scale(1.1);
+      }
+      .image-text {
+          position: absolute;
+          bottom: 10px; /* 调整文字位置 */
+          left: 10px;  /* 调整文字位置 */
+          color: white; /* 文字颜色 */
+          font-size: 20px; /* 文字大小 */
+          background-color: rgba(0, 0, 0, 0.5); /* 背景颜色，增加可读性 */
+          padding: 5px; /* 文字周围的空间 */
+          border-radius: 10px; /* 添加圆角边界 */
+      }
+
+      </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lato"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/w3.css" />
+    <link rel="stylesheet" type="text/css" href="css/w3-parallax.css" />
+    <link rel="stylesheet" href="css/horizontal.css" />
+
+    <title>欢迎来到 | 北航影像库</title>
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-text-black" id="myNavbar">
+        <a
+          class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+          href="javascript:void(0);"
+          onclick="toggleFunction()"
+          title="Toggle Navigation Menu"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-hover-black w3-button"> 首页</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-user"></i> 关于</a
+        >
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-th"></i> 图片</a
+        >
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-envelope"></i> 联系我们</a
+        >
+      </div>
+
+      <!-- Navbar on small screens -->
+      <div
+        id="navDemo"
+        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"
+      >
+        <a
+          href="#about"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >关于</a
+        >
+        <a
+          href="#portfolio"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >图片</a
+        >
+        <a
+          href="#contact"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >联系我们</a
+        >
+      </div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span
+          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" id="city-life"
+          >欢迎来到 <span class="w3-hide-small">| 北航影像库</span></span
+        >
+      </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center">关于北京航空航天大学</h3>
+      <p class="w3-center"><em>I love photography</em></p>
+      <p>
+        北京航空航天大学（Beihang University），简称“北航”，位于首都北京市，
+        是中华人民共和国工业和信息化部直属的全国重点大学，中央直管高校， 位列
+        国家“双一流”、“985工程”、“211工程”重点建设高校，入选珠峰计划、2011计
+        划、111计划、卓越工程师教育培养计划、国家建设高水平大学公派研究生项目
+        、中国政府奖学金来华留学生接收院校、国家级新工科研究与实践项目、国家级
+        大学生创新创业训练计划、国家大学生创新性实验计划、全国深化创新创业教育
+        改革示范高校、强基计划试点高校，为国际宇航联合会、中欧精英大学联盟、
+        中国-西班牙大学联盟、中俄工科大学联盟、中国高校行星科学联盟、中国人工
+        智能教育联席会、全国高等军工院校课程思政联盟、W3C组织成员。
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <img
+            src="img/bio.jpg"
+            class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+            alt="Photo of Me"
+            width="500"
+            height="333"
+          />
+        </div>
+        <!-- 作者头像图片 -->
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>学校创建于1952年，时名北京航空学院，由当时的北洋大学、清华大学、
+             厦门大学、四川大学、重庆大学等八所院校的航空系合并组建，1959年
+             学校被国家指定为全国重点高校，1988年4月2日改名为北京航空航天大学。
+             2017年入选“世界一流大学和一流学科”建设高校A类名单。
+             截至2023年7月，学校分为学院路校区、沙河校区，总占地3000多亩，总
+             建筑面积244万平方米；设有35个二级学院，开设78个本科专业；拥有23
+             个博士后科研流动站，33个博士学位授权一级学科点，36个硕士学位授权
+             一级学科点；有教职工6112人，其中专任教师3073人；有全日制在校生
+             35000余人，其中本科生与研究生比例为1:1，在校攻读学位的外国留学生
+             1100余人。
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">3000+</span><br />
+        亩
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">244+</span><br />
+        万平方米
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">70+</span><br />
+        本科专业
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">35000+</span><br />
+        全日制在校生
+      </div>
+    </div>
+    <div>
+      <!-- Second Parallax Image with Portfolio Text -->
+      <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+          <span
+            class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" id="city-life"
+            >校园风采</span
+          >
+        </div>
+      </div>
+    </div>
+    <!-- 横栏图片  -->
+    <div id="scroll">
+      <img
+        src="img/city-1.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-2.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-3.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-4.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-5.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/liberty-statue.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/bridge-brooklyn.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-1.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-2.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+      <img
+        src="img/city-3.jpg"
+        onclick="onClick(this)"
+        class="w3-hover-opacity"
+        alt="北京航空航天大学"
+      />
+
+      <!-- Modal for full size images on click-->
+      <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+        <span class="w3-button w3-display-topright" title="Close Modal Image"
+          ><i class="fas fa-times"></i> Close</span
+        >
+        <div
+          class="w3-modal-content w3-animate-opacity w3-center w3-transparent "
+        >
+          <img id="img01" class="w3-image" />
+          <p id="caption" class="w3-opacity w3-large"></p>
+        </div>
+      </div>
+    </div>
+    <!-- Container (Portfolio Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="portfolio">
+      <h3 class="w3-center">我们的最新作品</h3>
+      <p class="w3-center">
+        <em
+          >Here are some of my latest lorem work ipsum tipsum.</em
+        >
+      </p>
+      <br />
+
+      <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img
+            src="img/city-1.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-text-white w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-2.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-3.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/city-4.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+      </div>
+
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img
+            src="img/city-5.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/liberty-statue.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity w3-text-white"
+            alt="北京航空航天大学"
+          />
+        </div>
+
+        <div class="w3-col m3">
+          <img
+            src="img/cityscape-roads.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+        <div class="w3-col m3">
+          <img
+            src="img/bridge-brooklyn.jpg"
+            style="width:100%"
+            onclick="onClick(this)"
+            class="w3-hover-opacity"
+            alt="北京航空航天大学"
+          />
+        </div>
+      </div>
+      <h3 class="w3-center">三大校区导览地图</h3>
+      <p class="w3-center">
+        <em
+          >Here are three maps of BUAA.</em
+        >
+      </p>
+      <br />
+
+      <!--三校区-->
+      <div class="c">
+        <div class="i">
+            <a href="学院路.html" target="_blank">
+                <img src="img/xueyuanlu.jpg" class="hover-effect">
+                <span class="image-text">学院路校区</span>
+            </a>
+        </div>
+        <div class="i">
+            <a href="沙河.html" target="_blank">
+                <img src="img/shahe.png" class="hover-effect">
+                <span class="image-text">沙河校区</span>
+            </a>
+        </div>
+        <div class="i">
+            <a href="杭州校区地图链接.html" target="_blank">
+                <img src="img/zhongfa.png" class="hover-effect">
+                <span class="image-text">杭州校区</span>
+            </a>
+        </div>
+    </div>
+    </div>
+    
+    <!-- Modal for full size images on click-->
+    <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
+      <span class="w3-button w3-display-topright" title="Close Modal Image"
+        ><i class="fas fa-times"></i
+      ></span>
+      <div
+        class="w3-modal-content w3-animate-opacity w3-center w3-transparent "
+      >
+        <img id="img01" class="w3-image" />
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+
+    <!-- Third Parallax Image with Portfolio Text -->
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-black w3-wide">联系我们</span>
+      </div>
+    </div>
+
+    <!-- Container (Contact Section) -->
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">北  航  影  像  库</h3>
+      <p class="w3-center"><em><b>加入到我们中来！！</b> </em></p>
+
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+          <img
+            src="img/touxiang.jpg"
+            alt="Nyc cityscape view on water"
+            class="w3-image w3-round"
+            style="width:100%"
+          />
+        </div>
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-large w3-margin-bottom">
+            <i
+              class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            <span class="highlighted-text">
+            <a href="liuyan.html" style="text-decoration: none; color: inherit;">
+              可以在这里留言发表您的宝贵意见。</a></span>
+        <br>
+            <i
+              class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
+            ></i>
+            还有什么问题？ 也可以直接联系我们！<br />
+          </div>
+          <p>
+            Do you want to be a photographer? <i class="fas fa-camera-retro"></i>
+          </p>
+          <form action="#home">
+            <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Name"
+                  required
+                  name="Name"
+                />
+              </div>
+              <div class="w3-half">
+                <input
+                  class="w3-input w3-border"
+                  type="text"
+                  placeholder="Email"
+                  required
+                  name="Email"
+                />
+              </div>
+            </div>
+            <input
+              class="w3-input w3-border"
+              type="text"
+              placeholder="Message"
+              required
+              name="Message"
+            />
+            <button class="w3-button w3-grey w3-right w3-section" type="submit">
+              <i class="fa fa-paper-plane"></i> 发 送 信 息
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center">
+      <a href="#home" class="w3-button w3-grey"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>回 到 顶 部
+      </a>
+      <p>
+        Parallax Theme &copy; 2019<a
+          href="#"
+          title="Parallax Theme website"
+          class="w3-hover-text-green"
+        >
+          MIT License</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+      // Change style of navbar on scroll
+      window.onscroll = function() {
+        myFunction();
+      };
+      function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          navbar.className =
+            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+          navbar.className = navbar.className.replace(
+            " w3-card w3-animate-top w3-white",
+            ""
+          );
+        }
+      }
+
+      // Used to toggle the menu on small screens when clicking on the menu button
+      function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+    </script>
+  </body>
+</html>

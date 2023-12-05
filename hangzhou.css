@@ -1,0 +1,46 @@
+.hzhead{
+	height: 150px;
+	width: 100%;
+	text-align: center;
+	font-size: 75px;
+	font-family: 华文行楷;
+}
+.imglist{
+	width: 9999px;
+	height: 700px;
+	animation: 12s hangzhou infinite;
+	border: 5px black;
+}
+.imglist img{
+	float: left;
+	width: 1000px;
+	height: 700px;
+	padding: 2px;
+	border-color: black;
+}
+.lside{
+	float: left;
+	height: 600px;
+	width: 300px;
+}
+.banner{
+	padding: 10px;
+	width: 1000px;
+	height: 600px;
+	overflow: hidden;
+	
+}
+@keyframes hangzhou{
+	0%{transform: translateX(0px)}
+	33.3%{transform: translateX(-1002px)}
+	66.7%{transform: translateX(-2004px)}
+	100%{transform: translateX(-3006px)}
+}
+.beijing{
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	opacity: 0.5;
+	background-repeat: repeat;
+	position: fixed;
+}
